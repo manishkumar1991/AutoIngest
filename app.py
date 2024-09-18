@@ -34,9 +34,9 @@ dropdown_options = [
 
 reserved_columns = ["_ResourceId", "id", "_SubscriptionId", "TenantId", "Type", "UniqueId", "Title","_ItemId","verbose_b","verbose","MG","_ResourceId_s"]
 
-tenant_id = "17cea101-dd9b-43d0-9d67-f028b6efc55f"  # Tenant ID the data collection endpoint resides in
-app_id = "1e1b4f6a-2c84-4e0e-8488-412e21868b62"  # Application ID created and granted permissions
-app_secret = "RfX8Q~wicwQVYUFplpXsbwbSfo7ciyvKx3_cEa1O"  # Secret created for the application
+tenant_id = ""  # Tenant ID the data collection endpoint resides in
+app_id = ""  # Application ID created and granted permissions
+app_secret = ""  # Secret created for the application
 
 workspace_id = "c64eb659-e5d8-4727-a9cd-ea4a085138e6"
 workspaceName = "personal-workspace"
