@@ -1,0 +1,13 @@
+﻿DeviceVendor,DeviceProduct,DeviceEventClassID,DeviceSeverity,DeviceAction,DeviceHostName,DestinationPort,DestinationIP,SourceIP,Message,EventType,Protocol,SourceUserName,DestinationUserName,DeviceProcessName,StartTime,EndTime,Type
+Cisco,ASA,1234,High,Blocked,Firewall1,22,192.168.1.10,203.0.113.45,Brute-force SSH login attempt detected and blocked,SSH,TCP,unknown,root,sshd,2024-09-18T12:45:33Z,2024-09-18T12:45:35Z,CommonSecurityLog
+Cisco,ASA,1234,High,Blocked,Firewall1,22,192.168.1.10,203.0.113.45,Multiple failed SSH login attempts,SSH,TCP,unknown,root,sshd,2024-09-18T12:46:01Z,2024-09-18T12:46:03Z,CommonSecurityLog
+Palo Alto Networks,PA-220,AUTH_FAIL,Medium,Detected,Firewall2,3389,192.168.1.20,198.51.100.25,Brute-force RDP login attempt detected,RDP,TCP,unknown,Administrator,rdp,2024-09-18T12:47:12Z,2024-09-18T12:47:14Z,CommonSecurityLog
+Cisco,ASA,1234,High,Blocked,Firewall1,22,192.168.1.10,203.0.113.45,Brute-force SSH login attempt detected and blocked,SSH,TCP,unknown,root,sshd,2024-09-18T12:45:33Z,2024-09-18T12:45:35Z,CommonSecurityLog
+Cisco,ASA,1234,High,Blocked,Firewall1,22,192.168.1.10,203.0.113.45,Multiple failed SSH login attempts,SSH,TCP,unknown,root,sshd,2024-09-18T12:46:01Z,2024-09-18T12:46:03Z,CommonSecurityLog
+Palo Alto Networks,PA-220,AUTH_FAIL,Medium,Detected,Firewall2,3389,192.168.1.20,198.51.100.25,Brute-force RDP login attempt detected,RDP,TCP,unknown,Administrator,rdp,2024-09-18T12:47:12Z,2024-09-18T12:47:14Z,CommonSecurityLog
+Cisco,ASA,1234,High,Blocked,Firewall1,22,192.168.1.10,203.0.113.45,Brute-force SSH login attempt detected and blocked,SSH,TCP,unknown,root,sshd,2024-09-18T12:45:33Z,2024-09-18T12:45:35Z,CommonSecurityLog
+Cisco,ASA,1234,High,Blocked,Firewall1,22,192.168.1.10,203.0.113.45,Multiple failed SSH login attempts,SSH,TCP,unknown,root,sshd,2024-09-18T12:46:01Z,2024-09-18T12:46:03Z,CommonSecurityLog
+Palo Alto Networks,PA-220,AUTH_FAIL,Medium,Detected,Firewall2,3389,192.168.1.20,198.51.100.25,Brute-force RDP login attempt detected,RDP,TCP,unknown,Administrator,rdp,2024-09-18T12:47:12Z,2024-09-18T12:47:14Z,CommonSecurityLog
+Cisco,ASA,1234,High,Blocked,Firewall1,22,192.168.1.10,203.0.113.45,Brute-force SSH login attempt detected and blocked,SSH,TCP,unknown,root,sshd,2024-09-18T12:45:33Z,2024-09-18T12:45:35Z,CommonSecurityLog
+Cisco,ASA,1234,High,Blocked,Firewall1,22,192.168.1.10,203.0.113.45,Multiple failed SSH login attempts,SSH,TCP,unknown,root,sshd,2024-09-18T12:46:01Z,2024-09-18T12:46:03Z,CommonSecurityLog
+Palo Alto Networks,PA-220,AUTH_FAIL,Medium,Detected,Firewall2,3389,192.168.1.20,198.51.100.25,Brute-force RDP login attempt detected,RDP,TCP,unknown,Administrator,rdp,2024-09-18T12:47:12Z,2024-09-18T12:47:14Z,CommonSecurityLog
