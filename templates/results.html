@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission Result</title>
+    <!-- Bootstrap CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">My WebApp</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main container -->
+    <div class="container">
+        <h1 class="mb-4">Submitted Details</h1>
+        <div class="card">
+            <div class="card-body">
+                <p><strong>Tenant ID:</strong> {{ data.tenant_id }}</p>
+                <p><strong>App ID:</strong> {{ data.app_id }}</p>
+                <p><strong>App Secret:</strong> {{ data.app_secret }}</p>
+                <p><strong>Workspace ID:</strong> {{ data.workspace_id }}</p>
+                <p><strong>Workspace Name:</strong> {{ data.workspace_name }}</p>
+                <p><strong>Resource Group Name:</strong> {{ data.resource_group_name }}</p>
+                <p><strong>Endpoint Name:</strong> {{ data.endpoint_name }}</p>
+                <p><strong>Endpoint URI:</strong> {{ data.endpoint_uri }}</p>
+                <p><strong>Details:</strong> {{ data.details }}</p>
+                <p><strong>Selected Option:</strong> {{ data.option }}</p>
+            </div>
+        </div>
+
+        <!-- Button to return to the home page -->
+        <a href="/" class="btn btn-primary mt-3">Go to Home</a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

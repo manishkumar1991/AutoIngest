@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Details</title>
+    <!-- Bootstrap CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+
+        /* Style the loading screen */
+        #loading-screen {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            z-index: 9999; /* Make sure it covers everything */
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            padding-top: 20%;
+        }
+
+        /* Spinner wheel styles */
+        .spinner-border {
+            width: 3rem;
+            height: 3rem;
+            border-width: 0.3rem;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px; /* Adjust height as needed */
+            resize: none;  /* Optional: Prevent resizing */
+        }
+
+        .dropdown-list {
+            width: 250px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading screen with rotating wheel -->
+    <div id="loading-screen">
+        <div class="spinner-border text-light" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <div>Please wait while we process your request...</div>
+    </div>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">My WebApp</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link " href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/simulate">Simulate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/help">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main container -->
+    <div class="container">
+        <h1 class="mb-4">Simulate an Attack</h1>
+        <form action="/submit_simulate" method="POST" onsubmit="showLoadingScreen()">
+            <!-- Tenant ID -->
+            <div class="form-group">
+                <label for="tenant_id" class="form-label">Tenant ID:</label>
+                <input type="text" id="tenant_id" name="tenant_id" class="form-control" required>
+            </div>
+            <!-- App ID -->
+            <div class="form-group">
+                <label for="app_id" class="form-label">App ID:</label>
+                <input type="text" id="app_id" name="app_id" class="form-control" required>
+            </div>
+            <!-- App Secret (password field) -->
+            <div class="form-group">
+                <label for="app_secret" class="form-label">App Secret:</label>
+                <input type="password" id="app_secret" name="app_secret" class="form-control" required>
+            </div>
+            <!-- Workspace ID -->
+            <div class="form-group">
+                <label for="workspace_id" class="form-label">Workspace ID:</label>
+                <input type="text" id="workspace_id" name="workspace_id" class="form-control" required>
+            </div>
+            <!-- Workspace Name -->
+            <div class="form-group">
+                <label for="workspace_name" class="form-label">Workspace Name:</label>
+                <input type="text" id="workspace_name" name="workspace_name" class="form-control" required>
+            </div>
+            <!-- Resource Group Name -->
+            <div class="form-group">
+                <label for="resource_group_name" class="form-label">Resource Group Name:</label>
+                <input type="text" id="resource_group_name" name="resource_group_name" class="form-control" required>
+            </div>
+            <!-- Data Collection Endpoint Name -->
+            <div class="form-group">
+                <label for="endpoint_name" class="form-label">Data Collection Endpoint Name:</label>
+                <input type="text" id="endpoint_name" name="endpoint_name" class="form-control" required>
+            </div>
+            <!-- Endpoint URI -->
+            <div class="form-group">
+                <label for="endpoint_uri" class="form-label">Endpoint URI:</label>
+                <input type="text" id="endpoint_uri" name="endpoint_uri" class="form-control" required>
+            </div>
+
+            <!-- Attack Type Dropdown -->
+            <div class="form-group">
+                <label for="attack_type" class="form-label">Attack Type:</label>
+                <select id="attack_type" name="attack_type" class="form-select dropdown-list">
+                    <option value="Brute force">Brute force</option>
+                    <option value="D DOS">D DOS</option>
+                    <option value="Ex Infiltration">Ex Infiltration</option>
+                </select>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and custom script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showLoadingScreen() {
+            // Show the loading screen when the form is submitted
+            document.getElementById('loading-screen').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
